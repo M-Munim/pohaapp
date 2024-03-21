@@ -383,11 +383,11 @@ const App = () => {
           <Route index element={<Home />} />
         </Route>
 
-        <Route path="Dashmain/*" element={
+        <Route path="/Dashmain/*" element={
           <DashboardLayout>
             <Routes>
               <Route index element={<Dashmain />} />
-              <Route path="phypracticals/*" element={
+              <Route path="/phypracticals/*" element={
                 <Routes>
                   <Route index element={<PhyPracticals />} />
                   {/* 12 */}
@@ -581,7 +581,7 @@ const App = () => {
               } />
 
               {/* BIOLOGY */}
-              <Route path="biopracticals/*" element={
+              <Route path="/biopracticals/*" element={
                 <Routes>
                   <Route index element={<BioPracticals />} />
 
@@ -747,7 +747,7 @@ const App = () => {
               } />
 
               {/* CHEMISTRY */}
-              <Route path="chempracticals/*" element={
+              <Route path="/chempracticals/*" element={
                 <Routes>
                   <Route index element={<ChemPracticals />} />
 
@@ -905,8 +905,8 @@ const App = () => {
                     </CS9Outlet>
                   } />
 
-                    {/* 9 5*/}
-                    <Route path="AmmoniumChloride9/*" element={
+                  {/* 9 5*/}
+                  <Route path="AmmoniumChloride9/*" element={
                     <AC9Outlet>
                       <Routes>
                         <Route path="theory" element={<ChemTheory95 />} />
