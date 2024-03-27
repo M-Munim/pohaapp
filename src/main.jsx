@@ -1,7 +1,7 @@
 import './index.css'
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes, useRoutes } from 'react-router-dom';
 import Layout from './Layout.jsx';
 import Home from './Components/Home/Home.jsx';
 import Dashmain from './Components/Dashboard/Dashmain.jsx';
@@ -375,23 +375,39 @@ import ChemResources95 from './Components/Dashboard/ChemPracticals/Chem9thexplai
 import ChemFeedback95 from './Components/Dashboard/ChemPracticals/Chem9thexplained/AmmoniumChloride9/NavPages/ChemFeedback95.jsx'
 import ChemVideo95 from './Components/Dashboard/ChemPracticals/Chem9thexplained/AmmoniumChloride9/NavPages/ChemVideo95.jsx'
 
-const App = () => {
-  return (
-    <Router>
-      <Routes>
+let Routing = [
+  {
+    "path": "/",
+    "element": <Home />
+  }
+]
 
-        <Route path="/" element={() => {
-          <>Testing</>
-        }}>
-          {/* <Route index element={<Home />} /> */}
-        </Route>
-      </Routes>
-    </Router >
+const App = () => {
+  const Routes = useRoutes(
+    Routing
+  );
+  return (
+
+    // <Router>
+    //   <Routes>
+
+    //     <Route path="/" element={() => {
+    //       <>Testing</>
+    //     }}>
+    //       <Route index element={<Home />} />
+    //     </Route>
+    //   </Routes>
+    // </Router >
+    <>
+      {
+        Routes
+      }
+    </>
   );
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+
+  <App />
+
 );
