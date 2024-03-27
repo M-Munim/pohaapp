@@ -374,11 +374,11 @@ import ChemVivaVoice95 from './Components/Dashboard/ChemPracticals/Chem9thexplai
 import ChemResources95 from './Components/Dashboard/ChemPracticals/Chem9thexplained/AmmoniumChloride9/NavPages/ChemResources95.jsx'
 import ChemFeedback95 from './Components/Dashboard/ChemPracticals/Chem9thexplained/AmmoniumChloride9/NavPages/ChemFeedback95.jsx'
 import ChemVideo95 from './Components/Dashboard/ChemPracticals/Chem9thexplained/AmmoniumChloride9/NavPages/ChemVideo95.jsx'
-
+import Heading from './Components/Heading.jsx';
 let Routing = [
   {
     "path": "/",
-    "element": <Home />
+    "element": <Heading />
   }
 ]
 
@@ -407,7 +407,8 @@ const App = () => {
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-
-  <App />
+  <Router>
+    <App />
+  </Router>
 
 );
